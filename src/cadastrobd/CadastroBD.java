@@ -6,6 +6,13 @@ package cadastrobd;
 
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+
+import cadastrobd.model.Pessoa;
+import cadastrobd.model.PessoaFisica;
+import cadastrobd.model.PessoaFisicaDAO;
+import cadastrobd.model.util.ConectorBD;
+import cadastrobd.model.util.SequenceManager;
 
 /**
  *
@@ -17,9 +24,13 @@ public class CadastroBD {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws SQLException {
-        // TODO code application logic here
-        
+        PessoaFisicaDAO pfDAO = new PessoaFisicaDAO();
+
+        PessoaFisica PessoaF = new PessoaFisica("00011122299", 1, "Jose da Silva",
+        "Rua Americano do Brasil", "Campinas", "SP", "1137968555", "josesilva@jose.com.br");
+        pfDAO.incluir(PessoaF);
        
+        
     }
     
 }

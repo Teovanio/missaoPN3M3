@@ -18,8 +18,8 @@ public class SequenceManager {
 
         ResultSet rs = conectorBD.getSelect("SELECT NEXT VALUE FOR " + nomeSequencia + ";");
         rs.next();
-        int next = rs.getInt(1);
-        return next;
+        int nextValue = rs.getInt(1);
+        return nextValue;
 
     }
 }
